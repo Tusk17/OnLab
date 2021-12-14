@@ -70,6 +70,19 @@
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="['bdatos']">Citas</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Usuario
+          </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" 
+                        [routerLink]="['registrarse']"
+                        >Iniciar sesión/Registrarse</a>
+                        <a class="dropdown-item" (click)="logout()">Cerrar Sesión</a>
+                        <a class="dropdown-item" [routerLink]="['bdatos']"
+                        *ngIf="userLogged|async as user">Citas de {{ user.email }}</a>
+                    </div>
+                </li>
                 <a class="btn btn-outline-light  my-2 my-sm-0 " [routerLink]="['registrarse']">Registrarse</a>
             </ul>
         </div>
