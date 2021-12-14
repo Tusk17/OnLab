@@ -1,0 +1,200 @@
+<body>
+    <section class="contact-box">
+        <div class="row no-gutters g-0">
+            <div class="col-xl-5 col-lg-12 image-container">
+                <div class="position-static testiomonial p-4">
+                    <h1 class="step-border font-weight-bold mb-3">Mastografía</h1>
+                    <br />
+                    <div class="row ml-1">
+                        <p>
+                            Los estudios de gabinete, utilizados para la detección y control de los padecimientos mamarios, tienen indicaciones y características especifícas, es por ello que deben ser solicitados por el médico de acuerdo con una valoración y previo consentimiento
+                            de la paciente. <br /><br /><strong>Consulta previamente a tú médico. Recuerda que es el
+                profesional facultado para indicarte el estudio apropiado de
+                acuerdo con tu historial clínico. Él mismo deberá interpretar
+                tus resultados.</strong
+              >
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="pic">
+            <img src="assets/img/mastografia.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-7 col-lg-12 d-flex">
+        <div class="container align-self-center p-6 pt-4">
+          <h1 class="font-weight-bold mb-3">Agendar cita</h1>
+          <p class="mb-4">
+            Ingresa la siguiente información para agendar una cita en
+            laboratorios Onlab
+          </p>
+
+
+
+            <form action="">
+
+              <label class="font-weight-bold">Seleccione fecha y hora</label>
+              <!--///////////////////////////////////////////////////-->
+              <div class="form-row  " style="font-size: 13px;">
+                  <div class="form-group col-6 ">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Fecha de cita</mat-label>
+                          <input type="date" [(ngModel)]="servicio.fecha" matInput placeholder="Fecha" required name="email" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 ">
+                      <input class="lista" style="height: 73%;" placeholder="sexo" [(ngModel)]="servicio.sexo" type="text" name="sexo" list="sexoU" />
+                      <datalist id="sexoU">
+            <option value="Hombre"></option>
+            <option value="Mujer"></option>
+          </datalist>
+
+                  </div>
+              </div>
+
+              <label class="font-weight-bold">Por favor registrar los datos tal cual aparecen en su identificación oficial</label>
+              <!--///////////////////////////////////////////////////-->
+              <div class="form-row " style="font-size: 13px;">
+                  <div class="form-group col-6 ">
+                      <!--<label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                                   <mat-form-field appearance="outline" style="width: 100%;">-->
+                      <mat-form-field appearance="outline">
+                          <mat-label>Nombre del paciente</mat-label>
+                          <input [(ngModel)]="servicio.nombreC" matInput placeholder="Nombre(s)" type="text" required minlength="6" name="repassword" ngModel #repassword="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 ">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Apellido Paterno</mat-label>
+                          <input [(ngModel)]="servicio.apellidoP" matInput placeholder="Apellido Paterno" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 ">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Apellido Materno</mat-label>
+                          <input [(ngModel)]="servicio.apellidoM" matInput placeholder="apellido Materno" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 ">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Fecha de Nacimiento</mat-label>
+                          <input [(ngModel)]="servicio.fechaN" matInput type="date" placeholder="Fecha nacimiento" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 lg-6 col-xs-6">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Código Postal</mat-label>
+                          <input [(ngModel)]="servicio.postalCode" matInput placeholder="Código postal" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 col-xs-6">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Colonia</mat-label>
+                          <input [(ngModel)]="servicio.colonia" matInput placeholder="Colonia" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 lg-6 col-xs-6">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Calle</mat-label>
+                          <input [(ngModel)]="servicio.calle" matInput placeholder="Calle" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 col-xs-6">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Número</mat-label>
+                          <input [(ngModel)]="servicio.numero" matInput placeholder="Número" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+              </div>
+              <!--///////////////////////////////////////////////////-->
+
+
+              <!--///////////////////////////////////////////////////-->
+              <label class="font-weight-bold">Contacto</label>
+
+              <div class="form-row  " style="font-size: 14px;">
+                  <div class="form-group col-6 lg-6 col-xs-6">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Número telefónico</mat-label>
+                          <input [(ngModel)]="servicio.telefono" matInput placeholder="Telefono" required name="text" ngModel #email="ngModel" />
+                      </mat-form-field>
+                  </div>
+                  <div class="form-group col-6 col-xs-6">
+                      <mat-form-field appearance="outline">
+                          <mat-label>Correo eléctronico </mat-label>
+                          <input [(ngModel)]="servicio.email" matInput placeholder="E-mail" required name="email" ngModel #email="ngModel" />
+                          <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                          <mat-icon matSuffix>email</mat-icon>
+                      </mat-form-field>
+                  </div>
+              </div>
+
+              <button  (click)="saveMasto()" mat-raised-button style="background-color: #458ff6; color: white" class="login-button col-12 ">
+    Guardar
+  </button>
+          </form>
+
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h4 class="mb-3">Nosotros</h4>
+          <a>
+            Onlab puede analizar una gran cantidad de muestras biológicas y
+            cultivos diariamente,
+          </a>
+        </div>
+        <div class="col-md-3">
+          <h4 class="mb-3">Menu</h4>
+          <ul class="list-unstyled">
+            <li><a href=" ">Nosotros</a></li>
+            <li><a href=" ">Servicios</a></li>
+            <li><a href=" ">Pacientes</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4 class="mb-3">Servicios</h4>
+          <ul class="list-unstyled">
+            <li><a href=" ">Laboratorio</a></li>
+            <li><a href=" ">Pruebas</a></li>
+            <li>
+              <a href=" ">Preguntas frecuentes</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4 class="mb-3">Redes Sociales</h4>
+          <div class="social">
+            <a href=" " target="_blank "
+              ><i class="fab fa-facebook-f" aria-hidden="true "></i
+            ></a>
+          </div>
+          <div class="social">
+            <a href="" target="_blank "
+              ><i class="fab fa-youtube" aria-hidden="true "></i
+            ></a>
+          </div>
+          <div class="social">
+            <a href="# "
+              ><i class="fab fa-instagram" aria-hidden="true "></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-12 text-center my-3">
+          <a>Onlab © 2021 |</a>
+          <a href="# "> Aviso de privacidad | Términos y condiciones </a>
+          <a>| Todos los derechos reservados </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>

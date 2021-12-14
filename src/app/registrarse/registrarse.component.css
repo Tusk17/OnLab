@@ -1,0 +1,24 @@
+mat-form-field,
+mat-checkbox {
+    width: 80%;
+    display: block;
+    margin: auto;
+    font-family: mulish;
+}
+
+mat-card-content {
+    margin-top: 20px;
+    font-family: mulish;
+}
+
+.login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    font-family: mulish;
+}
+
+.contact-box {
+    padding: 0;
+}

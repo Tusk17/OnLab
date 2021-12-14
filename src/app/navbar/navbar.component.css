@@ -1,0 +1,22 @@
+.top-bar span {
+    font-size: 17px;
+    padding: 1px 6px;
+}
+
+@media (max-width: 991.98px) {
+    .top-bar .logo {
+        text-align: center;
+    }
+}
+
+.top-bar {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav>li {
+    padding-left: 10px;
+    padding-right: 10px;
+}

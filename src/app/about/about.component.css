@@ -1,0 +1,184 @@
+    .about-section {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 100px;
+    }
+    
+    .about-section {
+        background: url("https://medsel.com.br/wp-content/uploads/2020/03/bigstock-Medical-Doctors-At-The-Confere-172333217-735x460-1.jpg");
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+        overflow: auto;
+        padding: 100px 0;
+    }
+    
+    .inner-container {
+        width: 55%;
+        float: right;
+        background-color: #f8f8f8;
+        padding: 150px;
+    }
+    
+    .inner-container h1 {
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    
+    .text {
+        font-size: 15px;
+        color: #545454;
+        text-align: justify;
+        margin-bottom: 40px;
+    }
+    
+    .skills {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    @media screen and (max-width:1200px) {
+        .inner-container {
+            padding: 80px;
+        }
+    }
+    
+    @media screen and (max-width:1000px) {
+        .about-section {
+            background-size: 100%;
+            padding: 100px 40px;
+        }
+        .inner-container {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width:600px) {
+        .about-section {
+            padding: 0;
+        }
+        .inner-container {
+            padding: 60px;
+        }
+    }
+    /*team*/
+    
+    .team-member {
+        background-color: #ffffff;
+    }
+    
+    .team-member .hline {
+        width: 70px;
+        height: 2px;
+        background-color: #2196F3;
+        margin: 16px auto;
+    }
+    
+    .title-sm {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    
+    .team-member .team-member-img img,
+    .team-member .team-member-img .social-icons {
+        transition: all 0.4s ease;
+    }
+    
+    .team-member .team-member-img .social-icons {
+        width: 100%;
+        height: 60px;
+        background-color: #2196F3;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .team-member .team-member-img {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .team-member .team-member-img .social-icons a {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        font-size: 24px;
+        color: #fff;
+        border-radius: 100px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    .team-member .team-member-img .social-icons a:hover {
+        background-color: #FFF;
+        color: #2196F3;
+    }
+    
+    .team-member:hover .team-member-img .social-icons {
+        bottom: 0;
+    }
+    
+    .team-member:hover img {
+        transform: translateY(-60px);
+    }
+    /* footer */
+    
+    footer {
+        border-top: 1px solid white;
+        padding-top: 30px;
+        background: #2196F3;
+    }
+    
+    footer a,
+    h4 {
+        text-decoration: none;
+        color: rgb(255, 253, 253);
+    }
+    
+    footer .social {
+        background: #ffff;
+        border-color: #ffffff;
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+    
+    footer .social a {
+        color: #2196F3;
+    }
+    
+    .section-bg {
+        background-color: #FFF;
+    }
+    
+    .section-intro {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    
+    .section-intro .hline {
+        width: 120px;
+        height: 2px;
+        background-color: #2196F3;
+        margin: 16px auto 0 auto;
+    }
