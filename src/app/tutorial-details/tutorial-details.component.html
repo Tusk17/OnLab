@@ -1,0 +1,44 @@
+<div *ngIf="currentTutorial" class="edit-form">
+  <h4>Cita =</h4>
+  <form>
+    <div class="form-group">
+      <label for="title">Fecha</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        [(ngModel)]="currentTutorial.fecha"
+        name="title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Teléfono</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        [(ngModel)]="currentTutorial.telefono"
+        name="description"
+      />
+    </div>
+
+    <div class="form-group">
+      <!--<label><strong>Status:</strong></label>
+      {{ currentTutorial.published ? "Published" : "Pending" }}-->
+    </div>
+  </form>
+
+  <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+    Eliminar Cita
+  </button>
+
+  <button type="submit" class="badge badge-success" (click)="updateTutorial()">
+    Actualizar datos
+  </button>
+  <p>{{ message }}</p>
+</div>
+
+<div *ngIf="!currentTutorial">
+  <br />
+  <p>No se pudo modificar la cita...</p>
+</div>

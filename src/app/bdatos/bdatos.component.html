@@ -208,26 +208,20 @@
           <form action="">
             <br />
             <br />
-            <label class="font-weight-bold">Folio</label>
+            <label class="font-weight-bold">Presiona el botón "Obtener Citas"</label>
             <!--///////////////////PRUEBA////////////////////////////////-->
             <div class="form-row" style="font-size: 15px">
               <div class="form-group col-12">
-                <mat-form-field>
-                  <input
-                    
-                    matInput
-                    placeholder="Folio"
-                    required
-                    name="username"
-                    ngModel
-                    #username="ngModel"
-                  />
-                  <mat-error *ngIf="username.invalid">
-                    Dato requerido
-                  </mat-error>
-                </mat-form-field>
               </div>
             </div>
+            <button
+              (click)="modificar()"
+              mat-raised-button
+              style="background-color: #458ff6; color: white"
+              class="login-button col-12"
+            >
+              Obtener Citas
+            </button>
             <label class="font-weight-bold">Selecciona el motivo</label>
             <!--///////////////////PRUEBA////////////////////////////////-->
             <div class="form-row" style="font-size: 14px">
@@ -249,63 +243,35 @@
               </div>
             </div>
 
-            <label class="font-weight-bold">Datos</label>
+            
             <!--///////////////////////////////////////////////////-->
-            <div class="form-row" style="font-size: 13px">
-              <div class="form-group col-6">
-                <mat-form-field appearance="outline">
-                  <mat-label>Nombre del paciente</mat-label>
-                  <input
-                    
-                    matInput
-                    placeholder="Nombre(s)"
-                    type="text"
-                    required
-                    minlength="6"
-                    name="repassword"
-                    ngModel
-                    #repassword="ngModel"
-                  />
-                </mat-form-field>
-              </div>
-              <div class="form-group col-6">
-                <mat-form-field appearance="outline">
-                  <mat-label>Fecha de nacimiento del paciente</mat-label>
-                  <input
-                    type="date"
-                    
-                    matInput
-                    placeholder="Fecha"
-                    required
-                    name="email"
-                    ngModel
-                    #email="ngModel"
-                  />
-                </mat-form-field>
-              </div>
-            </div>
-            <!--///////////////////////////////////////////////////-->
-
-            <button
-              (click)="modificar()"
-              mat-raised-button
-              style="background-color: #458ff6; color: white"
-              class="login-button col-12"
-            >
-              Guardar
-            </button>
             <h4>Tutorials List</h4>
     <ul class="list-group">
       <li
         class="list-group-item"
         *ngFor="let tutorial of tutorials; let i = index"
         [class.active]="i == currentIndex"
-        
+        (click)="setActiveTutorial(tutorial, i)"
       >
-        {{ tutorial.email }}
+        {{ tutorial.nombreC }}
+        {{ tutorial.apellidoP }}
+        {{ tutorial.apellidoM }}
       </li>
     </ul>
           </form>
+          <div class="col-md-6">
+            <div *ngIf="currentTutorial">
+              <app-tutorial-details
+                (refreshList)="refreshList()"
+                [tutorial]="currentTutorial"
+              ></app-tutorial-details>
+            </div>
+        
+            <div *ngIf="!currentTutorial">
+              <br />
+              <p>Presiona en una de las citas en cuanto aparezca...</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

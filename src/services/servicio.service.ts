@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import Servicio from '../models/servicio-m.model';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +12,7 @@ export class ServicioService {
     
   }
   getAll(email:string): AngularFireList<Servicio> {
-    return this.db.list(this.dbPath, ref => ref.orderByChild('email').equalTo(email));
+    return this.db.list(this.dbPath, ref => ref.orderByChild('uid').equalTo(email));
   }
 
   create(servicio: Servicio): any {

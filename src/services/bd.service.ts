@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import Tutorial from '../models/bdol.model';
+import Tutorial from '../models/servicio-m.model';
 
 @Injectable({
   providedIn: 'root'

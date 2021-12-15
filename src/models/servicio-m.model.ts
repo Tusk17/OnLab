@@ -13,4 +13,5 @@ export default class Servicio {
     numero?: string;
     telefono?: string;
     email?: string| null;
+    uid?: string;
 }

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
 import Swal from 'sweetalert2';
 import Servicio from 'src/models/servicio-m.model';
 import { ServicioService } from 'src/services/servicio.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-mastografia',
   templateUrl: './mastografia.component.html',
@@ -13,9 +14,16 @@ export class MastografiaComponent implements OnInit {
  //@ViewChild('formulario')formulario!;
  form!:FormGroup;
  constructor(
-   private formBuilder:FormBuilder,private servicioService: ServicioService
+   private formBuilder:FormBuilder,private servicioService: ServicioService,
+   private afuauth: AngularFireAuth
  ) { 
    this.formulario();
+   this.afuauth.onAuthStateChanged((user) => {
+    if (user){
+      var uid=user.uid;
+      this.servicio.uid=uid
+    }else {}
+  })
  }
  saveMasto(): void {
   this.servicioService.create(this.servicio).then(() => {

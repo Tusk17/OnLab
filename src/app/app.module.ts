@@ -34,6 +34,7 @@ import { RayosxComponent } from './rayosx/rayosx.component';
 import { MastografiaComponent } from './mastografia/mastografia.component';
 import { BdatosComponent } from './bdatos/bdatos.component';
 import { CancelarComponent } from './cancelar/cancelar.component';
+import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { CancelarComponent } from './cancelar/cancelar.component';
     MastografiaComponent,
     BdatosComponent,
     CancelarComponent,
-    
+    TutorialDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { ServicioComponent } from './servicio/servicio.component';
 import { UltrasonidoComponent } from './ultrasonido/ultrasonido.component';
 import { CovidComponent } from './covid/covid.component';
 import { RayosxComponent } from './rayosx/rayosx.component';
+import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.component';
 import { MastografiaComponent } from './mastografia/mastografia.component';
 import { BdatosComponent } from './bdatos/bdatos.component';
 import { CancelarComponent } from './cancelar/cancelar.component';
@@ -27,6 +28,7 @@ const routes: Routes = [  {path: '', component:HomeComponent, pathMatch:'full'},
 {path: 'mastografia', component:MastografiaComponent, pathMatch:'full'},
 {path: 'bdatos', component:BdatosComponent, pathMatch:'full'},
 {path: 'cancelar', component:CancelarComponent, pathMatch:'full'},
+{path: 'tutorial-details', component:TutorialDetailsComponent, pathMatch:'full'},
 {path:'**', redirectTo:''}
 ];
 
