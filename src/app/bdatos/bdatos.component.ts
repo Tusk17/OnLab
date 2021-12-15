@@ -55,7 +55,7 @@ modificar(): void {
     this.tutorials = data;
   });
   Swal.fire(
-    '¡Éxito!','Modificaste tu cita','success'
+    'Obteniendo','las citas','success'
   )
   }
 

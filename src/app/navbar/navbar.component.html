@@ -1,86 +1,112 @@
 <!-- Top Bar Start -->
 <section class="bg-light">
-    <div class="container ">
-        <div class="row top-bar align-items-center">
-            <div class="col-lg-4 col-md-12">
-
-                <span class="text-primary"><i class="fab fa-facebook-f" ></i></span>
-                <span class="text-primary"><i class="fab fa-instagram"></i></span>
-                <span class="text-primary"><i class="fab fa-whatsapp"></i></span>
-                <span class="text-primary"><i class="fab fa-twitter"></i></span>
-
-
-            </div>
-            <div class="col-lg-8 col-md-7 d-none d-lg-block text-right">
-
-                <span class="text-primary">
-                    <i class="fas fa-phone"></i>
-                    +52 8311240807
-                </span>
-                <span class="text-primary">
-                   |
-                </span>
-                <span class="text-primary">
-                    <i class="fas fa-envelope"></i>
-                     Onlab@gmail.com
-                </span>
-            </div>
-
-        </div>
-
+  <div class="container">
+    <div class="row top-bar align-items-center">
+      <div class="col-lg-4 col-md-12">
+        <span class="text-primary"><i class="fab fa-facebook-f"></i></span>
+        <span class="text-primary"><i class="fab fa-instagram"></i></span>
+        <span class="text-primary"><i class="fab fa-whatsapp"></i></span>
+        <span class="text-primary"><i class="fab fa-twitter"></i></span>
+      </div>
+      <div class="col-lg-8 col-md-7 d-none d-lg-block text-right">
+        <span class="text-primary">
+          <i class="fas fa-phone"></i>
+          +52 8311240807
+        </span>
+        <span class="text-primary"> | </span>
+        <span class="text-primary">
+          <i class="fas fa-envelope"></i>
+          Onlab@gmail.com
+        </span>
+      </div>
     </div>
+  </div>
 </section>
 <!--Top Bar End -->
 
-<nav class="navbar navbar-expand-lg  navbar-dark bg-primary sticky-top  w-100">
-    <div class="container">
-        <a class="navbar-brand" href="home">
-            <img src="assets/img/logoO.png" alt="" style="max-width: 100%;">
-        </a>
-        <!--<a class="navbar-brand" href="">ON<strong>LAB</strong></a>-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top w-100">
+  <div class="container">
+    <a class="navbar-brand" href="home">
+      <img src="assets/img/logoO.png" alt="" style="max-width: 100%" />
+    </a>
+    <!--<a class="navbar-brand" href="">ON<strong>LAB</strong></a>-->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                <li class="nav-item active">
-                    <a class="nav-link " [routerLink]="['home']">Inicio </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['home']">Inicio </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            *ngIf="userlog==true"
+          >
             Servicios
           </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" [routerLink]="['servicio']">Laboratorio</a>
-                        <a class="dropdown-item" [routerLink]="['covid']">Pruebas COVID-19</a>
-                        <a class="dropdown-item" [routerLink]="['ultrasonido']">Ultrasonido</a>
-                        <a class="dropdown-item" [routerLink]="['rayox']">Rayos X</a>
-                        <a class="dropdown-item" [routerLink]="['mastografia']">Mastografía</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['paciente']">Pacientes</a>
-                </li>
-                <!--<li class="nav-item">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" [routerLink]="['servicio']">Laboratorio</a>
+            <a class="dropdown-item" [routerLink]="['covid']"
+              >Pruebas COVID-19</a
+            >
+            <a class="dropdown-item" [routerLink]="['ultrasonido']"
+              >Ultrasonido</a
+            >
+            <a class="dropdown-item" [routerLink]="['rayox']">Rayos X</a>
+            <a class="dropdown-item" [routerLink]="['mastografia']"
+              >Mastografía</a
+            >
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['paciente']">Pacientes</a>
+        </li>
+        <!--<li class="nav-item">
                     <a class="nav-link" [routerLink]="['preguntas']">Preguntas frecuentes</a>
                     </li>-->
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['about']">Acerca de</a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['about']">Acerca de</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Usuario
           </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" (click)="logout()">Cerrar Sesión</a>
-                        <a class="dropdown-item" [routerLink]="['bdatos']"
-                        *ngIf="userLogged|async as user">Citas de {{ user.email }}</a>
-                    </div>
-                </li>
-                <a class="btn btn-outline-light  my-2 my-sm-0 " [routerLink]="['registrarse']">Iniciar sesión/Registrarse</a>
-            </ul>
-        </div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" (click)="logout()">Cerrar Sesión</a>
+            <a
+              class="dropdown-item"
+              [routerLink]="['bdatos']"
+              *ngIf="userLogged | async as user"
+              >Citas de {{ user.email }}</a
+            >
+          </div>
+        </li>
+        <a
+          class="btn btn-outline-light my-2 my-sm-0"
+          [routerLink]="['registrarse']"
+          >Iniciar sesión/Registrarse</a
+        >
+      </ul>
     </div>
-
+  </div>
 </nav>
